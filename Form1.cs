@@ -16,10 +16,35 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        float soA, soB, ketqua;
+        public bool Nhap()
+        {
+            if (float.TryParse(txtA.Text, out soA))
+            {
+                if (float.TryParse(txtB.Text, out soB))
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Bạn nhập sai định dạng số B");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn nhập sai định dạng số A");
+                return false;
+            }
+        }
 
         private void btn_cong_Click(object sender, EventArgs e)
         {
-
+            if (Nhap() == true)
+            {
+                ketqua = soA + soB;
+                kq.Text = ketqua.ToString();
+            }
         }
 
         private void btn_tru_Click(object sender, EventArgs e)
