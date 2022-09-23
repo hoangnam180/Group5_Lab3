@@ -63,7 +63,11 @@ namespace WindowsFormsApp1
 
         private void bnt_chia_Click(object sender, EventArgs e)
         {
-
+            if( Nhap()==true)
+            {
+                ketqua = soA / soB;
+                kq.Text = ketqua.ToString();
+            }
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
