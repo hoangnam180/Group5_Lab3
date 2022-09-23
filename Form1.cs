@@ -49,7 +49,11 @@ namespace WindowsFormsApp1
 
         private void btn_tru_Click(object sender, EventArgs e)
         {
-
+            if (Nhap() == true)
+            {
+                ketqua = soA - soB;
+                kq.Text = ketqua.ToString();
+            }
         }
 
         private void btn_nhan_Click(object sender, EventArgs e)
